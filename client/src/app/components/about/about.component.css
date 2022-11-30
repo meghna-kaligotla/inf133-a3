@@ -1,0 +1,28 @@
+img {
+	max-width: 400px;
+}
+
+th {
+	color:#ffffff;
+	font-weight:bold;
+
+}
+
+td {
+	color:#ffffff;
+}
+
+#gestureTbl {
+	position:relative;
+	left:230px;
+	bottom:790px;
+}
+
+td, th {
+	border: 1px solid #ffffff;
+}
+
+table {
+	border-collapse:collapse;
+	width:490px;
+}

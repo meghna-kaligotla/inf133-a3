@@ -1,0 +1,48 @@
+<!--TODO: Define click callback to load about me information-->
+<button id = "about" class="btn btn-light" (click)="aboutMe()">Load info about me</button>
+<h3 id = "name"></h3>
+<img id = "pic" [src]="profile_pic">
+<p>
+	<a id = "profile" class="btn btn-light" target="_blank" [href]="profile_link">Open profile on Spotify</a>	
+</p>
+<table id="gestureTbl">
+	<tr>
+	  <th>Gesture</th>
+	  <th>Action</th>
+	</tr>
+	<tr>
+	  <td>Open Hand</td>
+	  <td>Login</td>
+	</tr>
+	<tr>
+	  <td>Two Open Hands</td>
+	  <td>Load profile information</td>
+	</tr>
+	<tr>
+		<td>Hand Pointing</td>
+		<td>Search</td>
+	  </tr>
+	  <tr>
+		<td>Hand Pointing (L-shape) and Closed Hand</td>
+		<td>Swipe left on carousel</td>
+	  </tr>
+	  <tr>
+		<td>Open Hand and Closed Hand</td>
+		<td>Swipe right on carousel</td>
+	  </tr>
+	  <tr>
+		<td>Two Closed Hands</td>
+		<td>Open Profile on Spotify</td>
+	  </tr>
+	  <tr>
+		<td>Closed Hand</td>
+		<td>Open Album on Spotify</td>
+	  </tr>
+  </table>
+<!--<h5>Raise Two Open Hands to Load Profile Information</h5>
+<h3 id="name"></h3>
+<img id = "pic" [src]="profile_pic">
+
+<p>
+	<a id= "profile" class="btn btn-light" target="_blank" [href]="profile_link">Open profile on Spotify</a>
+</p>-->

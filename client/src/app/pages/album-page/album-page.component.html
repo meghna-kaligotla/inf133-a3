@@ -1,0 +1,36 @@
+<app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+
+<div [innerHTML]="gesture"></div>
+<div>
+<div *ngIf="album" class="row">
+	<div class="col-6">
+		<!--TODO: populate with album name-->
+		<h1>{{album.name}}</h1>
+		<!--TODO: set src to album image URL-->
+		<img id="albumImg" [src] = "album.imageURL">
+
+		<!--TODO: loop over album artists-->
+		<p *ngFor = "let Artist of album.artists" >
+			<!--TODO: link to artist page, display artist name-->
+			Artist: <a href = "artist/{{Artist.id}}" >{{Artist.name}}</a>
+		</p>
+		<p>
+			<a id = "albumSpotify" class="btn btn-light" role="button" target="_blank" [href]="album.url">Open {{album.name}} on Spotify</a>
+		</p>
+		<p *ngFor = "let artist of album.artists" >
+			<!--TODO: link to artist page on spotify, display artist name-->
+			<a id= "artistSpotify" class="btn btn-light" role="button" target="_blank" [href] = "artist.url" >Open {{artist.name}} on Spotify</a>
+		</p>
+	</div>
+	<div class="col-6">
+		<h3>Album Tracks</h3>
+		<!--TODO: display the track list for the album. Hide the artist and album columns because they are redundant on this page.-->
+		<app-track-list [hideArtist] = "true" [hideAlbum] = "true" [tracks] = "tracks"></app-track-list>
+	</div>
+</div>
+<iframe id="url2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+<div>
+	<iframe id="url2" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div> 
+	
